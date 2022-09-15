@@ -95,9 +95,9 @@
 <script lang="ts" setup>
 import { bindTeam, getCode, getEmailcode, emailVerify } from '../../api/user';
 import { useFormSubmit, useOptionRequest, useRequestV2 } from '../../hooks/request';
-import { useUserStore, useAppStore } from '../../store';
+import { useUserStore } from '../../store';
 import { CountDownButton } from '../../components';
-import {ref, reactive, watch, onMounted} from 'vue'
+import { ref, reactive, watch, onMounted } from 'vue'
 import { useRoute, useRouter } from 'vue-router';
 import { formRules } from './type'
 import registryForm from './components/registry-form.vue';
@@ -113,7 +113,6 @@ const loading = ref(false)
 const countDownRef = ref<any>()
 const validateEmailRef = ref<any>()
 const userStore = useUserStore();
-const appStore = useAppStore();
 const formRef = ref()
 const route = useRoute()
 const router = useRouter()
@@ -163,7 +162,6 @@ const onLogin = () => {
       try {
         await userStore.login(formData)
         loading.value = false
-        appStore.fetchServerMenuConfig();
         userStore.getUserInfoStore();
 
         const { redirect, ...othersQuery } = router.currentRoute.value.query;

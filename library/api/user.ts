@@ -1,6 +1,6 @@
 import axios, { AxiosResponse } from 'axios';
 import { UserState } from '../types/user';
-import _axios, { _axiosm } from './interceptor'
+import { _axiosm } from './interceptor'
 import { TeamDataI, GetUploadUrlParamsI, MenuDataI } from '../types/global';
 
 export interface LoginData {
@@ -32,11 +32,6 @@ export function logout() {
 // 获取用户信息
 export function getUserInfo() {
   return _axiosm.get<UserState>('/member/v1/member-info');
-}
-
-// 获取菜单
-export function getMenuList(): Promise<AxiosResponse<MenuDataI>> {
-  return _axios.get('/customer/v1/get-menu');
 }
 
 // 用户加入团队 --- 注册
@@ -87,11 +82,4 @@ export function upload(url: any, obj: File):Promise<AxiosResponse<string>> {
 // 修改个人信息
 export function amendUserinfo(obj: any) {
   return _axiosm.post('/member/v1/update-member-info', obj);
-}
-
-/**
- * 获取平台列表
- */
- export const getPlatformList = (): Promise<AxiosResponse<{list:string[]}>> => {
-  return _axios.get('/customer/v1/social_account/platform')
 }

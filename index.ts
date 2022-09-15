@@ -35,3 +35,7 @@ export {
   listenerRouteChange,
   removeRouteListener
 } from './library/utils'
+
+export {
+  useUserStore
+} from './library/store'

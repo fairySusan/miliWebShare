@@ -47,14 +47,13 @@
 <script setup lang="ts">
 import { getCode, getEmailcode, reg} from '../../../api/user';
 import { useOptionRequest, useRequestV2 } from '../../../hooks/request';
-import { useAppStore, useUserStore } from '../../../store';
+import { useUserStore } from '../../../store';
 import { reactive, ref, watch } from 'vue';
 import { CountDownButton } from '../../../components'
 import { useRoute } from 'vue-router';
 
 const route = useRoute()
 const userStore = useUserStore();
-const appStore = useAppStore();
 
 const formRules = {
   email: [{required: true, message: '请输入邮箱'}],
@@ -110,7 +109,6 @@ const onRegistry = async () => {
       loading.value = true
       try {
         await userStore.regitsry(formData)
-        appStore.fetchServerMenuConfig();
         userStore.getUserInfoStore();
         loading.value = false
       } catch (e) {}

@@ -30,11 +30,11 @@ const useUserStore = defineStore('user', {
     role: '',
   }),
 
-  // // 开启数据持久化
-  // persist: {
-  //   key: 'userinfo',
-  //   storage: window.localStorage,
-  // },
+  // 开启数据持久化
+  persist: {
+    key: 'userinfo',
+    storage: window.localStorage,
+  },
 
   getters: {
     userInfo(state: UserState): UserState {
