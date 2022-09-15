@@ -96,7 +96,7 @@
 import { bindTeam, getCode, getEmailcode, emailVerify } from '@/api/user';
 import { useFormSubmit, useOptionRequest, useRequestV2 } from '@/hooks/request';
 import { useUserStore, useAppStore } from '@/store';
-import { CountDownButton } from './components';
+import { CountDownButton } from '../../components';
 import {ref, reactive, watch, onMounted} from 'vue'
 import { useRoute, useRouter } from 'vue-router';
 import { formRules } from './type'
