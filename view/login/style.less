@@ -1,0 +1,83 @@
+.arco-input-wrapper {
+  background-color: white;
+}
+
+@font-face {
+	font-family: MISANSHEAVY;
+	src: url('@/assets/font/MISANS-HEAVY.TTF'),
+}
+@font-face {
+	font-family: MISANSLIGHT;
+	src: url('@/assets/font/MISANS-LIGHT.TTF'),
+}
+.login-page {
+  height: 100vh;
+  display: flex;
+}
+.left-container {
+  width: 50%;
+  height: 100%;
+  background-image: url('@/assets/images/login-bj.png');
+  background-position: center;
+  background-size: 100%;
+  background-repeat: no-repeat;
+}
+.mili-title {
+  font-size: 60px;
+  color: @color-primary-6;
+  text-align: center;
+  margin-top: 180px;
+  font-family: MISANSHEAVY;
+}
+.mili-describe {
+  margin-top: 40px;
+  text-align: center;
+  color: #88929b;
+  font-size: 26px;
+  word-spacing: 5px;
+  display: flex;
+  flex-direction: column;
+  font-family: MISANSLIGHT;
+}
+.right-container {
+  flex: 1; 
+  background: #F5F6F8;
+}
+.platform-title {
+  width: 40%;
+  display: flex;
+  justify-content: space-between;
+  color: black;
+  font-size: 36px;
+  font-weight: bold;
+  margin: 180px auto;
+  margin-bottom: 0;
+  text-align: center;
+}
+
+.login-block {
+  width: 40%;
+  margin: 80px auto;
+}
+.login-input {
+  margin-bottom: 20px;
+}
+
+.login-button {
+  width: 220px; 
+  height: 36px;
+  border-radius: 18px;
+  margin-top: 40px;
+}
+.verfication-code-img {
+  width: 240px;
+  height: 36px;
+  &:hover {
+    filter: brightness(1.5);
+  }
+}
+
+.tab-title {
+  font-size: 18px;
+  color: @color-primary-6; 
+}
