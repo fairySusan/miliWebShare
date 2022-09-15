@@ -1,7 +1,3 @@
-export enum MessageType {
-  'init' = 'init',
-  'local' = 'local'
-}
 export interface PostMessageDataI {
   type: MessageType;
   token?: string;

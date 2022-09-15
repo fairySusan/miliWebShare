@@ -93,9 +93,9 @@
 </template>
 
 <script lang="ts" setup>
-import { bindTeam, getCode, getEmailcode, emailVerify } from '@/api/user';
-import { useFormSubmit, useOptionRequest, useRequestV2 } from '@/hooks/request';
-import { useUserStore, useAppStore } from '@/store';
+import { bindTeam, getCode, getEmailcode, emailVerify } from '../../api/user';
+import { useFormSubmit, useOptionRequest, useRequestV2 } from '../../hooks/request';
+import { useUserStore, useAppStore } from '../../store';
 import { CountDownButton } from '../../components';
 import {ref, reactive, watch, onMounted} from 'vue'
 import { useRoute, useRouter } from 'vue-router';
@@ -169,7 +169,7 @@ const onLogin = () => {
         const { redirect, ...othersQuery } = router.currentRoute.value.query;
         if (route.query.code) {
           router.push({
-            path: '/business',
+            path: '/',
             query: {
               ...othersQuery,
               invite_code: route.query.code,
@@ -178,7 +178,7 @@ const onLogin = () => {
           });
         } else {
           router.push({
-            path: '/business',
+            path: '/',
             query: {
               ...othersQuery,
             },

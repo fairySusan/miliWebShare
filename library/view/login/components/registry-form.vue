@@ -45,9 +45,9 @@
 </template>
 
 <script setup lang="ts">
-import { getCode, getEmailcode, reg} from '@/api/user';
-import { useOptionRequest, useRequestV2 } from '@/hooks/request';
-import { useAppStore, useUserStore } from '@/store';
+import { getCode, getEmailcode, reg} from '../../../api/user';
+import { useOptionRequest, useRequestV2 } from '../../../hooks/request';
+import { useAppStore, useUserStore } from '../../../store';
 import { reactive, ref, watch } from 'vue';
 import { CountDownButton } from '../../../components'
 import { useRoute } from 'vue-router';

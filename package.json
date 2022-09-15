@@ -4,6 +4,7 @@
   "description": "",
   "main": "index.ts",
   "scripts": {
+    "build": "vite",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -15,5 +16,19 @@
   "bugs": {
     "url": "https://github.com/fairySusan/miliStore/issues"
   },
-  "homepage": "https://github.com/fairySusan/miliStore#readme"
+  "homepage": "https://github.com/fairySusan/miliStore#readme",
+  "dependencies": {
+    "@arco-design/web-vue": "^2.35.0",
+    "axios": "^0.24.0",
+    "mitt": "^3.0.0",
+    "pinia": "^2.0.9",
+    "pinia-plugin-persistedstate": "^1.6.1",
+    "vue": "^3.2.31",
+    "vue-router": "^4.0.14"
+  },
+  "devDependencies": {
+    "@vitejs/plugin-vue": "^3.1.0",
+    "typescript": "^4.8.3",
+    "vite": "^3.1.1"
+  }
 }
