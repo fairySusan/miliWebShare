@@ -1,6 +1,4 @@
-import axios, { AxiosRequestConfig, AxiosResponse } from 'axios';
-import { Message, Modal } from '@arco-design/web-vue';
-import { useUserStore } from '../store';
+import axios, { AxiosRequestConfig } from 'axios';
 import { getToken } from '../utils/auth';
 
 export interface HttpResponse<T = unknown> {
@@ -9,6 +7,8 @@ export interface HttpResponse<T = unknown> {
   code: number;
   data: T;
 }
+
+console.log('好的哈是的', import.meta.env.VITE_API_BASE_URL)
 
 export const _axiosm = axios.create({
   baseURL: import.meta.env.VITE_API_MEMBER_URL,
