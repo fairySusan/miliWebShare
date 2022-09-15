@@ -4,7 +4,3 @@ export {
   PostMessageDataI,
   LOCALE_OPTIONS
 } from './types'
-
-export  {
-  ResetButton
-} from './components/index'
