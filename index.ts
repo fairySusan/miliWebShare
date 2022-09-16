@@ -33,7 +33,8 @@ export {
   AuthTool,
   CommonTool,
   RouterListenerTool,
-  ValidateTool
+  ValidateTool,
+  EventTool
 } from './library/utils'
 
 export {
