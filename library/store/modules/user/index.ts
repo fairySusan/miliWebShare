@@ -6,8 +6,7 @@ import {
   LoginData,
   reg,
 } from '../../../api/user';
-import { setToken, clearToken } from '../../../utils/auth'
-import { removeRouteListener } from '../../../utils/route-listener';
+import { AuthTool, RouterListenerTool} from '../../../utils'
 import { RegistryParamsI, UserState } from '../../../types/user';
 
 const useUserStore = defineStore('user', {
@@ -68,11 +67,11 @@ const useUserStore = defineStore('user', {
     async login(loginForm: LoginData) {
       try {
         const res = await userLogin(loginForm);   
-        setToken(res.data.token);
+        AuthTool.setToken(res.data.token);
         localStorage.setItem('CompanyId',res.data.mainCompanyId);
         localStorage.setItem('CompanyName',res.data.mainCompanyName);
       } catch (err) {
-        clearToken();
+        AuthTool.clearToken();
         throw err;
       }
     },
@@ -80,19 +79,19 @@ const useUserStore = defineStore('user', {
     async regitsry(registryForm: RegistryParamsI) {
       try {
         const res = await reg(registryForm);   
-        setToken(res.data.token);
+        AuthTool.setToken(res.data.token);
         localStorage.setItem('CompanyId',res.data.mainCompanyId);
         localStorage.setItem('CompanyName',res.data.mainCompanyName);
       } catch(e) {
-        clearToken();
+        AuthTool.clearToken();
         throw e;
       }
     },
     
     logoutCallBack() {
       this.resetInfo();
-      clearToken();
-      removeRouteListener();
+      AuthTool.clearToken();
+      RouterListenerTool.removeRouteListener();
     },
     // Logout
     async logout() {

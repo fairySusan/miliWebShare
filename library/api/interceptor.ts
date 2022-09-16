@@ -1,5 +1,5 @@
 import axios, { AxiosRequestConfig } from 'axios';
-import { getToken } from '../utils/auth';
+import { AuthTool } from '../utils';
 
 export interface HttpResponse<T = unknown> {
   status: number;
@@ -18,7 +18,7 @@ const requestInterceptor = (config: AxiosRequestConfig) => {
   if (!config.headers) {
     config.headers = {};
   }
-  config.headers.Authorization = `${getToken()}`;
+  config.headers.Authorization = `${AuthTool.getToken()}`;
   config.headers.CompanyId = `${localStorage.getItem('CompanyId')}`;
   return config;
 }
