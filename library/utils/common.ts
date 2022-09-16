@@ -42,3 +42,5 @@ export const openWindow = (
       .join(',')
   );
 };
+
+export default {transformRoutes,  openWindow}
