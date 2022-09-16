@@ -92,3 +92,11 @@ export const StatusOption = [
   {value: 1, label: '启用'},
   {value: 0, label: '停用'}
 ]
+
+export interface SelectedTeamProductI {
+  team: {
+    teamName: string;
+    id:string;
+  };
+  product: ProductItemI
+}

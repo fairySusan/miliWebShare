@@ -5,5 +5,6 @@ export type { PostMessageDataI } from './post-message'
 export type { 
   TeamDataI,
   TeamItemI,
-  ProductItemI
+  ProductItemI,
+  SelectedTeamProductI
 } from './global'

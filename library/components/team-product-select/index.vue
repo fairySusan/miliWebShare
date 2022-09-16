@@ -13,7 +13,7 @@
 import { getTeamProduct } from "../../api/user"
 import { TeamItemI } from "../../types/global";
 import { onMounted, ref, watch } from "vue";
-import { SelectedTeamProductI } from './type'
+import { SelectedTeamProductI } from '../../types/global'
 
 const options = ref<any>([])
 const teamList = ref<TeamItemI[]>([])

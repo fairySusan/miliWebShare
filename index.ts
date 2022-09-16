@@ -20,7 +20,8 @@ export type {
   PostMessageDataI,
   TeamDataI,
   TeamItemI,
-  ProductItemI
+  ProductItemI,
+  SelectedTeamProductI
 } from './library/types'
 
 export {
