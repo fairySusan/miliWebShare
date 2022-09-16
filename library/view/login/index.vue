@@ -101,6 +101,7 @@ import { ref, reactive, watch, onMounted } from 'vue'
 import { useRoute, useRouter } from 'vue-router';
 import { formRules } from './type'
 import registryForm from './components/registry-form.vue';
+import { Message } from '@arco-design/web-vue';
 
 enum TabEnum {
   '登录' = '1',
@@ -189,6 +190,7 @@ const onLogin = () => {
           validateEmailForm.email = formData.email
           showModal.value = true
         }
+        Message.error({content: err.response.data.message})
         loading.value = false
         getImageCode()
       }
