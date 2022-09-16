@@ -30,5 +30,4 @@ function removeRouteListener() {
   emitter.off(key);
 }
 
-
-export { setRouteEmitter, listenerRouteChange, removeRouteListener}
+export default { setRouteEmitter, listenerRouteChange, removeRouteListener}

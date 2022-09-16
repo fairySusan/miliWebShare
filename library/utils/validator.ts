@@ -1,4 +1,4 @@
-export class ValidateTool {
+export default class ValidateTool {
 
   // 手机号的正则
   static PhoneReg = /^1[3|4|5|6|7|8|9]\d{9}$/

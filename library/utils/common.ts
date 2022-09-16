@@ -43,4 +43,4 @@ const openWindow = (
   );
 };
 
-export {transformRoutes,  openWindow}
+export default {transformRoutes,  openWindow}

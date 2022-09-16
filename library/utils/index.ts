@@ -1,9 +1,9 @@
-export * as AuthTool from './auth'
+export { default as AuthTool } from './auth'
 
-export * as CommonTool from './common'
+export { default as CommonTool } from './common'
 
-export * as RouterListenerTool from './route-listener'
+export { default as RouterListenerTool } from './route-listener'
 
-export * as ValidateTool from './validator'
+export { default as ValidateTool } from './validator'
 
-export * as EventTool from './event'
+export { default as EventTool } from './event'
