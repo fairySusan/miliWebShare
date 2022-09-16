@@ -12,33 +12,19 @@
     :auto-upload="true"
     :show-retry-button="false"
     :limit="1"
+    v-model:file-list="fileList" 
   >
-    <template #upload-button>
-      <slot>
-        <div v-if="imgUrl" class="arco-upload-list-picture custom-upload-avatar">
-          <img class="avatar-img" :src="imgUrl" />
-          <div class="arco-upload-list-picture-mask">
-            <IconEdit />
-          </div>
-        </div>
-        <div class="arco-upload-picture-card" v-else>
-          <div class="arco-upload-picture-card-text">
-            <IconPlus />
-            <div style="margin-top: 10px; font-weight: 600">上传</div>
-          </div>
-        </div>
-      </slot>
-    </template>
   </a-upload>
 </template>
 
 <script setup lang="ts">
-import { ref, watch } from 'vue';
+import { reactive, ref, watch } from 'vue';
 import { getUpload, upload } from '../../api/user'
-import { RequestOption } from '@arco-design/web-vue';
+import { Message, RequestOption } from '@arco-design/web-vue';
+import { CommonTool } from '../../utils';
 
 const props = withDefaults(defineProps<{
-  defaultUrl?: string;
+  url?: string;
   accept?: string;
 }>(), {
   accept: 'image/png, image/jpeg, image/jpg'
@@ -49,18 +35,27 @@ const $emit = defineEmits<{
   (event: 'fail'):void
 }>()
 
+const fileList = ref<any[]>([])
 const uploadUrl = ref('')
 const imgUrl = ref('')
 
-watch(() => props.defaultUrl, (newVal) => {
+watch(() => props.url, (newVal) => {
+  imgUrl.value = newVal || ''
   if (newVal) {
-    imgUrl.value = newVal
+    fileList.value = [{
+      uid:  CommonTool.randomStr(),
+      name: '图片',
+      url: newVal
+    }]
+  } else {
+    fileList.value = []
   }
 })
 
 const onBeforeUpload = (file: File) => {
   return new Promise((resolve, reject) => {
-    const extend = file.name.split('.')[1] || file.type.split('/')[1]
+    const arr = file.name.split('.')
+    const extend = arr[arr.length-1] || file.type.split('/')[1]
     getUpload({
       project: 'saas',
       prefix: 'avatar',
@@ -73,11 +68,11 @@ const onBeforeUpload = (file: File) => {
 }
 
 const onUploadSuccess = () => {
-  console.log('上传成功')
+  Message.success({content: '上传成功'})
 }
 
 const onUploadFail = () => {
-  console.log('上传失败')
+  Message.error({content: '上传失败'})
 }
 
 const customRequest = (option: RequestOption) => {
@@ -87,6 +82,11 @@ const customRequest = (option: RequestOption) => {
       console.log(res)
       if (res.status === 200) {
         imgUrl.value = uploadUrl.value.split('?')[0];
+        fileList.value = [{
+          uid: CommonTool.randomStr(),
+          name: '图片',
+          url: imgUrl.value
+        }]
         onSuccess()
         $emit('success', imgUrl.value)
       } else {

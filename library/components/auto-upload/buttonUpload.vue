@@ -21,8 +21,8 @@
 </template>
 
 <script setup lang="ts">
-import { ref, watch } from 'vue';
-import { getUpload, upload } from '../../api/user'
+import { ref } from 'vue';
+import { getUpload, upload } from '@/api/user'
 import { FileItem, RequestOption } from '@arco-design/web-vue';
 
 withDefaults(defineProps<{
@@ -74,7 +74,6 @@ const customRequest = (option: RequestOption) => {
   const {onError, onSuccess, fileItem} = option
   if (fileItem.file) {
     upload(uploadUrl.value, fileItem.file).then(res => {
-      console.log(res)
       if (res.status === 200) {
         fileUrl.value = uploadUrl.value.split('?')[0];
         onSuccess()
