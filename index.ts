@@ -1,3 +1,7 @@
+export {
+  commonEn,
+  commonZh
+} from './library/local'
 export { 
   useThemeColor,
   useRequestV2, 
