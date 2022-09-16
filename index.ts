@@ -30,7 +30,9 @@ export {
   PageContainer,
   ConfirmButton,
   AvatarUpload,
-  ButtonUpload
+  ButtonUpload,
+  TeamSelect,
+  TeamProductSelect
 } from './library/components'
 
 export {

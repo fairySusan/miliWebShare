@@ -45,7 +45,7 @@ export function bindTeam(data: any) {
 }
 
 // 获取所有团队及产品
-export function getTeamData(): Promise<AxiosResponse<TeamDataI>> {
+export function getTeamProduct(): Promise<AxiosResponse<TeamDataI>> {
   return _axiosm.get('/member/v1/joined-team-product');
 }
 

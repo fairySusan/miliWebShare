@@ -5,3 +5,5 @@ export { default as PageContainer } from './page-container/index.vue';
 export { default as ConfirmButton } from './confirm-button/index.vue'; 
 export { default as AvatarUpload} from './auto-upload/avatarUpload.vue';
 export { default as ButtonUpload} from './auto-upload/buttonUpload.vue';
+export { default as TeamSelect} from './team-select/index.vue';
+export { default as TeamProductSelect} from './team-product-select/index.vue';
