@@ -30,14 +30,10 @@ export {
 } from './library/components'
 
 export {
-  isLogin,
-  getToken,
-  setToken,
-  clearToken,
-  transformRoutes,
-  setRouteEmitter,
-  listenerRouteChange,
-  removeRouteListener
+  AuthTool,
+  CommonTool,
+  RouterListenerTool,
+  ValidateTool
 } from './library/utils'
 
 export {

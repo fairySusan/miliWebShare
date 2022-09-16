@@ -1,16 +1,7 @@
-export {
-  isLogin,
-  getToken,
-  setToken,
-  clearToken
-} from './auth'
+export * as AuthTool from './auth'
 
-export {
-  transformRoutes
-} from './common'
+export * as CommonTool from './common'
 
-export {
-  setRouteEmitter,
-  listenerRouteChange,
-  removeRouteListener
-} from './route-listener'
+export * as RouterListenerTool from './route-listener'
+
+export { default as ValidateTool } from './validator'
