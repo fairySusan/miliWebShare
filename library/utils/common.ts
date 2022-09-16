@@ -1,13 +1,17 @@
 const transformRoutes = (routes: any[]) => {
   const list: any[] = [];
   routes
-    .filter((it) => it.status !== 0 && it.isMenu !== 0)
+    .filter((it) => it.status !== 0)
     .forEach((it) => {
       const routeItems: any = {
         key: it.id,
         title: it.name,
         name: it.identify,
-        path: it.identify,
+        path: '/' + it.identify,
+        type: it.type,
+        uri: it.uri,
+        identify: it.identify,
+        appName: it.appName,
         meta: {
           order: it.sort,
           locale: `${it.name}`,
