@@ -1,4 +1,4 @@
-export const transformRoutes = (routes: any[]) => {
+const transformRoutes = (routes: any[]) => {
   const list: any[] = [];
   routes
     .filter((it) => it.status !== 0 && it.isMenu !== 0)
@@ -26,7 +26,7 @@ export const transformRoutes = (routes: any[]) => {
 
 type TargetContext = '_self' | '_parent' | '_blank' | '_top';
 
-export const openWindow = (
+const openWindow = (
   url: string,
   opts?: { target?: TargetContext; [key: string]: any }
 ) => {
@@ -43,4 +43,4 @@ export const openWindow = (
   );
 };
 
-export default {transformRoutes,  openWindow}
+export {transformRoutes,  openWindow}

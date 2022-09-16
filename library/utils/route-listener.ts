@@ -31,4 +31,4 @@ function removeRouteListener() {
 }
 
 
-export default { setRouteEmitter, listenerRouteChange, removeRouteListener}
+export { setRouteEmitter, listenerRouteChange, removeRouteListener}
