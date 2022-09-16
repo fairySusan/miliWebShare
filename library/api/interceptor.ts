@@ -1,6 +1,4 @@
-import axios, { AxiosRequestConfig, AxiosResponse } from 'axios';
-import { Message, Modal } from '@arco-design/web-vue';
-import { useUserStore } from '../store';
+import axios, { AxiosRequestConfig } from 'axios';
 import { getToken } from '../utils/auth';
 
 export interface HttpResponse<T = unknown> {
