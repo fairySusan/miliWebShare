@@ -26,7 +26,11 @@ export type {
 export {
   ResetButton,
   SearchButton,
-  CountDownButton
+  CountDownButton,
+  PageContainer,
+  ConfirmButton,
+  AvatarUpload,
+  ButtonUpload
 } from './library/components'
 
 export {
