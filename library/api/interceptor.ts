@@ -8,8 +8,6 @@ export interface HttpResponse<T = unknown> {
   data: T;
 }
 
-console.log(process.env)
-
 export const _axiosm = axios.create({
   baseURL: import.meta.env.VITE_API_MEMBER_URL,
   timeout: 1000*30,
