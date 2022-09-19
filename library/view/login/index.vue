@@ -15,7 +15,7 @@
             <template #title><span class="tab-title">邮箱注册</span></template>
             <registryForm></registryForm>
             <div 
-              class="flexCenter marginTop primaryFontColor registry-link"
+              class="flexCenter marginTopL primaryFontColor registry-link"
               @click="showRegistryForm=false"
             >已有账号，去登录<icon-right />
             </div>
@@ -57,7 +57,7 @@
             </div>
 
             <div 
-              class="flexCenter marginTop primaryFontColor registry-link"
+              class="flexCenter marginTopL registry-link"
               @click="showRegistryForm=true"
             >
               没有账号，去注册<icon-right />
@@ -186,6 +186,7 @@ const onLogin = () => {
       } catch(err: any) {
         if (!err.response) return
         if (err.response.data.reason === 'MEMBER_EMAIL_NOT_VERIFIED') {
+          // 如果登录的时候，报错邮箱未验证，那么就让用户去验证邮箱
           validateEmailForm.nickname = err.response.data.metadata.nickname;
           validateEmailForm.email = formData.email
           showModal.value = true
@@ -250,9 +251,10 @@ const onRemenberPwd = (value: boolean | (string | number | boolean)[]) => {
     }
   }
   .registry-link {
+    color: @color-text-3;
     &:hover {
       cursor: pointer;
-      color: @color-primary-5;
+      color: @color-text-2;
     }
   }
 </style>

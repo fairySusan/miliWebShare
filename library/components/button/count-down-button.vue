@@ -1,11 +1,16 @@
 <template>
-  <a-button :disabled="isClicked" size="large" type="primary" class="code-button" @click="$emit('click')">
+  <a-button :disabled="isClicked" size="large" :type="type" class="code-button" @click="$emit('click')">
     {{ isClicked ? `${count}s`: '获取验证码'}}
   </a-button>
 </template>
 
 <script setup lang="ts">
 import { ref } from 'vue'
+withDefaults(defineProps<{
+  type?: "primary" | "dashed" | "text" | "outline" | "secondary" | undefined;
+}>(), {
+  type: "primary"
+})
 const $emit = defineEmits<{
   (event: 'click'):void
 }>()

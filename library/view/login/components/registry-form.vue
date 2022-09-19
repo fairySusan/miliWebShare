@@ -23,7 +23,7 @@
         <a-input placeholder="邮箱验证码" size="large" v-model="formData.code" allow-clear>
           <template #prefix><icon-safe /></template>
         </a-input>
-        <CountDownButton ref="countDownRef" class="code-button" @click="onSendEmailCode">
+        <CountDownButton ref="countDownRef" type="secondary" class="code-button" @click="onSendEmailCode">
           获取验证码
         </CountDownButton>
       </div>
