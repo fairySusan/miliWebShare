@@ -2,7 +2,7 @@ import { Message, Modal } from '@arco-design/web-vue';
 import axios, { AxiosRequestConfig, AxiosResponse } from 'axios';
 import { useUserStore } from '../store';
 import { AuthTool } from '../utils';
-import { HttpResponse } from '../types/global'
+import type { HttpResponse } from '../types/global'
 
 // 当前平台-相关接口的请求
 const _axios = axios.create({
