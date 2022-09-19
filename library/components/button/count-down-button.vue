@@ -1,5 +1,5 @@
 <template>
-  <a-button :disabled="isClicked" size="large" :type="type" class="code-button" @click="$emit('click')">
+  <a-button :disabled="isClicked" size="large" :type="type" @click="$emit('click')">
     {{ isClicked ? `${count}s`: '获取验证码'}}
   </a-button>
 </template>

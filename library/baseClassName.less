@@ -1,0 +1,559 @@
+
+//@import "@arco-design/web-vue/es/style/theme/global.less";
+
+@marginHalf: 5px;
+@paddingHalf: 5px;
+
+@margin: 10px;
+@padding: 10px;
+
+@marginM: 20px;
+@paddingM: 10px;
+
+@marginL: 30px;
+@paddingL: 30px;
+
+.container {
+	background-color: white;
+  border-radius: 8px;
+}
+
+/*------------fontsize---------*/
+.fontSizeMini {
+  font-size: @font-size-body-1;
+}
+
+.fontSizeSmall {
+	font-size: @font-size-body-2;
+}
+
+.fontSizeBase {
+	font-size: @font-size-body-3;
+}
+
+.fontSizeM {
+	font-size: @font-size-title-1;
+}
+
+.fontSizeL {
+	font-size: @font-size-title-2;
+}
+
+.fontSizeLL {
+	font-size: @font-size-title-3;
+}
+
+/*----------------字体加粗-----------------------*/
+.fontWeightBold {
+	font-weight: bold;
+}
+
+.fontWeightNormal {
+	font-weight: normal;
+}
+
+/*----------------字体颜色-----------------------*/
+// 主题色
+.primaryFontColor {
+	color: @color-primary-6;
+}
+
+// 浅一点的主题色1
+.primaryFontColorLight1 {
+	color: @color-primary-1;
+}
+
+// 浅一点的主题色2
+.primaryFontColorLight2 {
+	color: @color-primary-2;
+}
+
+// 浅一点的主题色3
+.primaryFontColorLight3 {
+	color: @color-primary-3;
+}
+
+// 浅一点的主题色4
+.primaryFontColorLight4 {
+	color: @color-primary-4;
+}
+
+// 浅一点的主题色5
+.primaryFontColorLight5 {
+	color: @color-primary-5;
+}
+
+// 浅一点的主题色6
+.primaryFontColorLight6 {
+	color: @color-primary-6;
+}
+
+// 深一点的主题色7
+.primaryFontColorLight7 {
+	color: @color-primary-7;
+}
+
+// 深一点的主题色8
+.primaryFontColorLight8 {
+	color: @color-primary-8;
+}
+
+// 深一点的主题色9
+.primaryFontColorLight9 {
+	color: @color-primary-9;
+}
+
+// 深一点的主题色10
+.primaryFontColorLight9 {
+	color: @color-primary-10;
+}
+
+// 主要的黑色字体
+.darkFontColor {
+	color: @color-text-1;
+}
+
+// 深一点的黑色字体
+.deepDarkFontColor {
+	color: #000000;
+}
+// 浅一点的黑色字体 
+.lightDarkFontColor {
+	color: @color-text-3;
+}
+// 再浅一点的黑色字体 
+.lighterDarkFontColor {
+  color: @color-text-4;
+}
+// 白色字体
+.whiteFontColor {
+	color: white;
+}
+
+// 红色字体
+.redFontColor {
+	color: @danger-6;
+}
+
+// 黄色字体
+.yellowFontColor {
+	color: @warning-6;
+}
+
+// 绿色字体
+.greenFontColor {
+	color: @success-6;
+}
+
+// 灰色字体
+.grayFontColor2 {
+	color: @color-text-2;
+}
+
+// 灰色字体
+.grayFontColor {
+	color: @color-text-4;
+}
+
+/*--------------border----------------------*/
+.border {
+	border: @color-border-2 @border-1 solid;
+}
+
+.borderBottom {
+	border-bottom: @color-border-2 @border-1 solid;
+}
+
+.borderTop {
+	border-top: @color-border-2 @border-1 solid;
+}
+
+.borderRight {
+	border-right: @color-border-2 @border-1 solid;
+}
+
+.borderLeft {
+	border-left: @color-border-2 @border-1 solid;
+}
+
+
+/*---------------flex--------------*/
+// 横向布局
+.flexRow {
+	display: flex;
+}
+
+// 横向布局 wrap
+.flexRowWrap {
+	display: flex;
+	flex-wrap: wrap;
+}
+
+// 横向布局，不换行
+.flexRowNoWrap {
+	display: flex;
+	flex-wrap: nowrap;
+}
+
+// 横向布局  space-between;
+.flexRowSpaceBetween {
+	display: flex;
+	justify-content: space-between;
+}
+
+// 横向布局 space-around
+.flexRowSpaceAround {
+	display: flex;
+	justify-content: space-around;
+}
+
+
+// 横向-justify-content: flex-end;
+.flexRowFlexEnd {
+	display: flex;
+	justify-content: flex-end;
+}
+
+// 横向-水平居中 center
+.flexRowCenter {
+	display: flex;
+	justify-content: center;
+}
+
+// 横向布局 align-items: center;
+.flexRowAlignItemCenter {
+	display: flex;
+	align-items: center;
+}
+
+// 横向布局 space-between;  align-items: center;
+.flexRowBetweenCenter {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+
+// 横向布局  space-between;  align-items: flex-start;
+.flexRowBetweenStart {
+	display: flex;
+	justify-content: space-between;
+	align-items: flex-start;
+}
+
+// 横向布局 space-around;  align-items: center;
+.flexRowAroundCenter {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-around;
+	align-items: center;
+}
+
+// 横向布局 垂直水平居中 justify-content: center;  align-items: center;
+.flexCenter{
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	align-items: center;
+}
+
+// 纵向布局
+.flexColumn {
+	display: flex;
+	flex-direction: column;
+}
+
+// 纵向布局 space-between
+.flexColumnSpaceBetween {
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+}
+
+// 纵向布局  space-around
+.flexColumnSpaceAround {
+	display: flex;
+	flex-direction: column;
+	justify-content: space-around;
+}
+
+// 纵向布局 align-items：center
+.flexColumnAlignItemCenter {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
+// 纵向布局 align-items：flex-start
+.flexColumnAlignItemStart {
+	display: flex;
+	flex-direction: column;
+	align-items: flex-start;
+}
+
+// 纵向布局 align-items：flex-end
+.flexColumnAlignItemEnd {
+	display: flex;
+	flex-direction: column;
+	align-items: flex-end;
+}
+
+
+// 纵向布局 space-between align-items：center
+.flexColumnBetweenCenter {
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	align-items: center;
+}
+
+// 纵向布局 space-around align-items：center
+.flexColumnAroundCenter {
+	display: flex;
+	flex-direction: column;
+	justify-content: space-around;
+	align-items: center;
+}
+
+// 纵向布局 space-around align-items: flex-start
+.flexColumnAroundStart {
+	display: flex;
+	flex-direction: column;
+	justify-content: space-around;
+	align-items: flex-start;
+}
+
+// 纵向布局 space-around align-items: flex-start
+.flexColumnBetweenEnd {
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	align-items: flex-end;
+}
+
+.flexNone {
+	flex: none;
+}
+
+/*--------------position-----------*/
+.relative {
+	position: relative;
+}
+
+.positionAbsolute {
+	position: absolute;
+}
+.positionFixed {
+	position: fixed;
+}
+
+/*-------------margin----------*/
+.margin {
+	margin: @margin;
+}
+
+.marginLeft {
+	margin-left: @margin;
+}
+
+.marginRight {
+	margin-right: @margin;
+}
+
+.marginTop {
+	margin-top: @margin;
+}
+
+.marginTopHalf {
+	margin-top: @marginHalf;
+}
+
+
+.marginBottom {
+	margin-bottom: @margin;
+}
+
+.marginTopLeft {
+	margin: @margin 0 0 @margin;
+}
+
+.marginTopRight {
+	margin: @margin @margin 0 0;
+}
+
+.marginTopBottom {
+	margin: @margin 0 @margin 0;
+}
+
+.marginLeftRight {
+	margin: 0 @margin;
+}
+
+
+.marginM {
+	margin: @marginM;
+}
+.marginLeftM {
+	margin-left: @marginM;
+}
+
+.marginRightM {
+	margin-right: @marginM;
+}
+
+.marginTopM {
+	margin-top: @marginM;
+}
+
+.marginBottomM {
+	margin-bottom: @marginM;
+}
+
+.marginTopLeftM {
+	margin: @marginM 0 0 @marginM;
+}
+
+.marginTopRightM {
+	margin: @marginM @marginM 0 0;
+}
+
+.marginTopBottomM {
+	margin: @marginM 0 @marginM 0;
+}
+
+.marginLeftRightM {
+	margin: 0 @marginM 0 @marginM;
+}
+
+.marginL {
+	margin: @marginL;
+}
+
+.marginLeftL {
+	margin-left: @marginL;
+}
+
+.marginRightL {
+	margin-right: @marginL;
+}
+
+.marginTopL {
+	margin-top: @marginL;
+}
+
+.marginBottomL {
+	margin-bottom: @marginL;
+}
+
+.marginTopLeftL {
+	margin: @marginL 0 0 @marginL;
+}
+
+.marginTopRightL {
+	margin: @marginL @marginL 0 0;
+}
+
+.marginTopBottomL {
+	margin: @marginL 0 @marginL 0;
+}
+
+.marginLeftRightL {
+	margin: 0 @marginL 0 @marginL;
+}
+
+/*----padding----------*/
+.padding {
+	padding: @padding;
+}
+
+.paddingLeft {
+	padding-left: @padding;
+}
+
+.paddingRight {
+	padding-right: @padding;
+}
+
+.paddingTop {
+	padding-top: @padding;
+}
+
+.paddingBottom {
+	padding-bottom: @padding;
+}
+
+.paddingTopLeft {
+	padding: @padding 0 0 @padding;
+}
+
+.paddingTopBottom {
+	padding: @padding 0;
+}
+
+.paddingLeftRight {
+	padding: 0 @padding;
+}
+
+.paddingL {
+	padding: @paddingL;
+}
+
+.paddingLeftL {
+	padding-left: @paddingL;
+}
+
+.paddingRightL {
+	padding-right: @paddingL;
+}
+
+.paddingTopL {
+	padding-top: @paddingL;
+}
+
+.paddingBottomL {
+	padding-bottom: @paddingL;
+}
+
+.paddingTopLeftL {
+	padding: @paddingL 0 0 @paddingL;
+}
+
+.paddingTopBottomL {
+	padding: @paddingL 0;
+}
+
+.paddingLeftRightL {
+	padding: 0 @paddingL;
+}
+
+
+/*-----------text-align--------------------*/
+.textAlignCenter {
+	text-align: center;
+}
+
+.textAlignLeft {
+	text-align: left;
+}
+
+.textAlignRight {
+	text-align: right;
+}
+
+.fontHideLine {
+	overflow: hidden;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+}
+
+/*---------------vertical-align-----------------*/
+
+.verticalAlignMid {
+	vertical-align: middle;
+}
+
+.pointer {
+	&:hover {
+		cursor: pointer;
+	}
+}
+
