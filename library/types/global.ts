@@ -1,5 +1,12 @@
 import { AxiosResponse } from "axios";
 
+export interface HttpResponse<T = unknown> {
+  status: number;
+  msg: string;
+  code: number;
+  data: T;
+}
+
 export interface Pagination {
   page: number;
   size: number;

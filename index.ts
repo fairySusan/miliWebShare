@@ -17,6 +17,7 @@ export {
 } from './library/types'
 
 export type {
+  HttpResponse,
   PostMessageDataI,
   TeamDataI,
   TeamItemI,
@@ -49,3 +50,8 @@ export {
 export {
   useUserStore
 } from './library/store'
+
+export {
+  _axios,
+  _axiosm
+} from './library/api/interceptor'
